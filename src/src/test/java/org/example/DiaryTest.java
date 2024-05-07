@@ -13,7 +13,6 @@ public class DiaryTest {
         @Test
         public void testConstructorReturnsExpectedValues() {
             // Arrange
-            System.out.println("Testing 1 2 1 2");
             // Act
             // Assert
             /*assertAll(
