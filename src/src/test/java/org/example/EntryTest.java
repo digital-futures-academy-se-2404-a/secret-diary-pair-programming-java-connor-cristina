@@ -55,4 +55,22 @@ public class EntryTest {
                 assertEquals(new Date(), testEntry.getEntryDate());
             }
         }
+    @Nested
+    @DisplayName("Entry Check Date Test")
+    class EntryTestCheckDate {
+
+        @Test
+        @DisplayName("Test checking with same date returns true")
+        public void testCheckWithMatchingDateReturnsTrue() {
+            // Arrange
+            String testContent = "I hate mornings";
+            Date testDate = new Date((int) 2024, (int) 5, (int) 7);
+            // Act
+            Entry testEntry = new Entry(testContent, testDate);
+            // Assert
+            assertTrue(testEntry.checkDate(testDate));
+            assertEquals(testDate, testEntry.getEntryDate());
+        }
+
+    }
 }

@@ -29,4 +29,9 @@ public class Entry {
     public void setEntryDate(Date entryDate) {
         this.entryDate = entryDate;
     }
+
+    public boolean checkDate(Date toCheck) {
+        if(toCheck == this.entryDate) { return true; }
+        else { return false; }
+    }
 }
