@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class EntryTest {
 
-    public class EntryTests {
+
 
         @Nested
         @DisplayName("Entry Constructor Test")
@@ -23,7 +23,7 @@ public class EntryTest {
             public void testConstructorReturnsExpectedValues() {
                 // Arrange
                 String testContent = "today I felt poorly";
-                Date testDate = new Date("07.05.2024");
+                Date testDate = new Date((int) 2024, (int) 5, (int) 7 );
                 // Act
                 Entry testEntry = new Entry(testContent, testDate);
                 // Assert
@@ -31,7 +31,20 @@ public class EntryTest {
                         () -> assertEquals(testContent, testEntry.getContents()),
                         () -> assertEquals(testDate, testEntry.getEntryDate())
                 );
+            } @Test
+            @DisplayName("Test content cannot be null")
+            public void testContentCannotBeNull() {
+                // Arrange
+                String testContent = null;
+                Date testDate = new Date();
+                // Act
+                Entry testEntry = new Entry(testContent, testDate);
+                // Assert
+                assertEquals("", testEntry.getContents());
+
+
             }
+
         }
-    }
+
 }

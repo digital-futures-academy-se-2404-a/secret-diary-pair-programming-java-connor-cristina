@@ -3,7 +3,7 @@ package org.example;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DiaryTest {
+/*public class DiaryTest {
 
     @Nested
     @DisplayName("Diary Tests")
@@ -15,12 +15,13 @@ public class DiaryTest {
             // Arrange
             // Act
             // Assert
-            /*assertAll(
+            assertAll(
                     () -> assertEquals("SE-1234-A", ""),
                     () -> assertEquals("Software Engineering", ""),
                     () -> assertEquals(0, 6),
                     () -> assertEquals(3, 7)
-            );*/
+            );
         }
     }
 }
+                */

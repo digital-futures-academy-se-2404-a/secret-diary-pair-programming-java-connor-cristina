@@ -9,6 +9,7 @@ public class Entry {
 
     public Entry(String content, Date date) {
         this.contents = content;
+        if (content == null){ this.contents = "";}
         this.entryDate = date;
     }
 
