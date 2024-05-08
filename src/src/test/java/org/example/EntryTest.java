@@ -31,7 +31,8 @@ public class EntryTest {
                         () -> assertEquals(testContent, testEntry.getContents()),
                         () -> assertEquals(testDate, testEntry.getEntryDate())
                 );
-            } @Test
+            }
+            @Test
             @DisplayName("Test content cannot be null")
             public void testContentCannotBeNull() {
                 // Arrange
@@ -41,10 +42,17 @@ public class EntryTest {
                 Entry testEntry = new Entry(testContent, testDate);
                 // Assert
                 assertEquals("", testEntry.getContents());
-
-
             }
-
+            @Test
+            @DisplayName("Test date cannot be null and defaults to current date")
+            public void testDateCannotBeNullAndDefaultsToCurrentDate() {
+                // Arrange
+                String testContent = "I hate mornings";
+                Date testDate = null;
+                // Act
+                Entry testEntry = new Entry(testContent, testDate);
+                // Assert
+                assertEquals(new Date(), testEntry.getEntryDate());
+            }
         }
-
 }

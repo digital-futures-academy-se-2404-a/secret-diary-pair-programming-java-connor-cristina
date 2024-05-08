@@ -8,9 +8,10 @@ public class Entry {
     private Date entryDate;
 
     public Entry(String content, Date date) {
+        this.entryDate = date;
         this.contents = content;
         if (content == null){ this.contents = "";}
-        this.entryDate = date;
+        if (date == null){ this.entryDate = new Date();}
     }
 
     public String getContents() {
