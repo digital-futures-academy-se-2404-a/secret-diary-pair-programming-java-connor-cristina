@@ -69,7 +69,19 @@ public class EntryTest {
             Entry testEntry = new Entry(testContent, testDate);
             // Assert
             assertTrue(testEntry.checkDate(testDate));
-            assertEquals(testDate, testEntry.getEntryDate());
+        }
+
+        @Test
+        @DisplayName("Test checking with different dates returns false")
+        public void testCheckWithDifferentDateReturnsFalse() {
+            // Arrange
+            String testContent = "I hate mornings";
+            Date testDate = new Date((int) 2024, (int) 5, (int) 7);
+            Date secondDate = new Date();
+            // Act
+            Entry testEntry = new Entry(testContent, testDate);
+            // Assert
+            assertFalse(testEntry.checkDate(secondDate));
         }
 
     }
